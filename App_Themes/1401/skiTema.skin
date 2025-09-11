@@ -1,0 +1,375 @@
+<%--
+Plantilla de máscara predeterminada. Las siguientes máscaras se proporcionan sólo como ejemplos.
+
+1. Máscara de control con nombre. SkinId debería definirse de forma única porque no se permite que haya varios SkinId por tipo de control en el mismo tema.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Máscara predeterminada. Skinid no está definido Sólo se permite una máscara de control por tipo de control en el mismo tema.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<%--GRILLA ESTANDAR CON PAGINACION DE REGISTROS--%>
+<%@ Register Assembly="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2" Namespace="eWorld.UI" TagPrefix="ew" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
+<%--GRILLA ESTANDAR SIN PAGINACION DE REGISTROS (MUESTRA TODOS LOS DATOS DE LA FUENTE SELECCIONADA)--%>
+<asp:GridView 
+            SkinID="skin_grilla_sin_paginacion" runat="server" 
+            EmptyDataText="<div class='cen alert alert-warning'>No hay registros de datos para mostrar.</div>"
+            CellPadding="10" GridLines="None"
+            AutoGenerateColumns="False"
+            CssClass="table table-bordered table-hover" 
+            ShowHeaderWhenEmpty="true"
+            >                 
+    <PagerSettings 
+            Mode                    ="NumericFirstLast"  
+            />                 
+    <HeaderStyle            CssClass="info grilla-header" HorizontalAlign="Center"        />            
+    <RowStyle               CssClass=""         />
+    <AlternatingRowStyle    CssClass=""         />            
+    <SelectedRowStyle       CssClass="warning"  />
+    <PagerStyle             CssClass="paginacion"    />
+    <FooterStyle            CssClass=""        />            
+</asp:GridView> 
+
+
+<asp:GridView 
+            SkinID="skin_grilla_sin_paginacion2" runat="server" 
+            EmptyDataText="<div class='cen alert alert-warning'>No hay registros de datos para mostrar.</div>"
+            CellPadding="10" GridLines="None"
+            AutoGenerateColumns="True"
+            CssClass="table table-bordered table-hover" 
+            ShowHeaderWhenEmpty="true"
+            >                 
+    <PagerSettings 
+            Mode                    ="NumericFirstLast"  
+            />                 
+    <HeaderStyle            CssClass="info grilla-header" HorizontalAlign="Center"        />            
+    <RowStyle               CssClass=""         />
+    <AlternatingRowStyle    CssClass=""         />            
+    <SelectedRowStyle       CssClass="warning"  />
+    <PagerStyle             CssClass="paginacion"    />
+    <FooterStyle            CssClass=""        />            
+</asp:GridView> 
+
+<asp:GridView 
+            SkinID="skin_grilla_contactos_paginacion" runat="server" 
+            EmptyDataText="<div class='cen alert alert-warning'>No hay registros de datos para mostrar.</div>"
+            CellPadding="10" GridLines="None"
+            AutoGenerateColumns="False"
+            CssClass="table table-bordered table-hover" 
+            ShowHeaderWhenEmpty="true"
+            >                 
+    <PagerSettings 
+            Mode                    ="NumericFirstLast"  
+            />                 
+    <HeaderStyle            CssClass="success grilla-header" HorizontalAlign="Center"        />            
+    <RowStyle               CssClass=""         />
+    <AlternatingRowStyle    CssClass=""         />            
+    <SelectedRowStyle       CssClass="warning"  />
+    <PagerStyle             CssClass="paginacion"    />
+    <FooterStyle            CssClass=""        />            
+</asp:GridView> 
+
+<asp:GridView 
+            SkinID="skin_grilla_garantias_paginacion" runat="server" 
+            EmptyDataText="<div class='cen alert alert-warning'>No hay registros de datos para mostrar.</div>"
+            CellPadding="10" GridLines="None"
+            AutoGenerateColumns="False"
+            CssClass="table table-bordered table-hover" 
+            ShowHeaderWhenEmpty="true"
+            >                 
+    <PagerSettings 
+            Mode                    ="NumericFirstLast"  
+            />                 
+    <HeaderStyle            CssClass="danger grilla-header" HorizontalAlign="Center"        />            
+    <RowStyle               CssClass=""         />
+    <AlternatingRowStyle    CssClass=""         />            
+    <SelectedRowStyle       CssClass="warning"  />
+    <PagerStyle             CssClass="paginacion"    />
+    <FooterStyle            CssClass=""        />            
+</asp:GridView> 
+
+<asp:Button SkinID="btn" runat="server" CssClass="btn" />
+<asp:Button SkinID="btn-primary" runat="server" CssClass="btn btn-primary" />
+<asp:Button SkinID="btn-info" runat="server" CssClass="btn btn-info" />
+<asp:Button SkinID="btn-success" runat="server" CssClass="btn btn-success" />
+<asp:Button SkinID="btn-warning" runat="server" CssClass="btn btn-warning" />
+<asp:Button SkinID="btn-danger" runat="server" CssClass="btn btn-danger" />
+<asp:Button SkinID="btn-inverse" runat="server" CssClass="btn btn-inverse" />
+<asp:Button SkinID="btn-link" runat="server" CssClass="btn btn-link" />
+
+<asp:LinkButton SkinID="lbn" runat="server" CssClass="btn"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-primary" runat="server" CssClass="btn btn-primary"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-info" runat="server" CssClass="btn btn-info"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-success" runat="server" CssClass="btn btn-success"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-warning" runat="server" CssClass="btn btn-warning" ></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-danger" runat="server" CssClass="btn btn-danger"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-inverse" runat="server" CssClass="btn btn-inverse"></asp:LinkButton>
+<asp:LinkButton SkinID="lbn-link" runat="server" CssClass="btn btn-link"></asp:LinkButton>
+
+<asp:LinkButton SkinID="lbx_AgregarTodos" runat="server" CssClass="btn btn-success btn-xs" ><i class="fa fa-arrow-circle-o-right"></i> Agregar todos</asp:LinkButton>
+<asp:LinkButton SkinID="lbx_AgregarSelec" runat="server" CssClass="btn btn-warning btn-xs" ><i class="fa fa-arrow-circle-right"></i> Agregar selección</asp:LinkButton>
+<asp:LinkButton SkinID="lbx_QuitarSelec" runat="server" CssClass="btn btn-warning btn-xs" ><i class="fa fa-arrow-circle-left"></i> Borrar selección</asp:LinkButton>
+<asp:LinkButton SkinID="lbx_QuitarTodos" runat="server" CssClass="btn btn-success btn-xs" ><i class="fa fa-arrow-circle-o-left"></i> Borrar todos</asp:LinkButton>
+
+
+<asp:LinkButton SkinID="lbn_regresar"      runat="server"  ToolTip="Retorna a la p&aacute;gina anterior"                                CssClass="btn btn-warning btn-xs"><i class="glyphicon glyphicon-arrow-left"></i> Regresar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_regresar_sm"      runat="server"  ToolTip="Retorna a la p&aacute;gina anterior"                                CssClass="btn btn-warning btn-xs"><i class="glyphicon glyphicon-arrow-left"></i> Regresar</asp:LinkButton>
+
+<asp:LinkButton SkinID="lbn_nuevo"      runat="server"  ToolTip="Insertar un nuevo registro"                                CssClass="btn btn-info btn-xs"><i class="glyphicon glyphicon-plus-sign"></i> Nuevo</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_editar"     runat="server"  ToolTip="Permite editar el registro seleccionado"                   CssClass="btn btn-warning btn-xs"><i class="glyphicon glyphicon-edit"></i> Editar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_eliminar"   runat="server"  ToolTip="Elimina el registro seleccionado"                          CssClass="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Eliminar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_buscar"     runat="server"  ToolTip="Realiza una b&uacute;squeda"   CssClass="btn btn-info btn-xs" ><i class="glyphicon glyphicon-search"></i> Buscar</asp:LinkButton>
+
+<asp:LinkButton SkinID="lb_CambiarEstado"   runat="server"  ToolTip="Finalizar contrato"                          CssClass="btn btn-inverse btn-xs"><i class="glyphicon glyphicon-arrow-right"></i> Finalizar</asp:LinkButton>
+<asp:LinkButton SkinID="lb_CambiarEstadoGarantia"   runat="server"  ToolTip="Cambiar el estado a la garantía" CssClass="btn btn-inverse btn-xs"><i class="glyphicon glyphicon-arrow-right"></i> Cambiar estado</asp:LinkButton>
+<asp:LinkButton SkinID="lb_LineasContrato"   runat="server"  ToolTip="Agregar o quitar líneas"  CssClass="btn btn-inverse btn-xs"><i class="glyphicon glyphicon-list-alt"></i> Lineas</asp:LinkButton>
+<asp:LinkButton SkinID="lb_NuevaModificativa"   runat="server"  ToolTip="Agregar modificativa"  CssClass="btn btn-inverse btn-xs"><i class="glyphicon glyphicon-plus-sign"></i> Modificativa</asp:LinkButton>
+
+<asp:LinkButton SkinID="lbn_filtrar"     runat="server"  ToolTip="Filtrar valores de la cuadrícula"   CssClass="btn btn-info" ><i class="glyphicon glyphicon-search"></i> Filtrar</asp:LinkButton>
+
+<asp:LinkButton SkinID="lbn_guardar"     runat="server"  ToolTip="Guarda los cambios realizados al registro"   CssClass="btn btn-success btn-xs" ><i class="glyphicon glyphicon-ok-sign"></i> Guardar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_calcular"     runat="server"  ToolTip="Realizar proceso de cálculo"   CssClass="btn btn-success btn-xs" ><i class="glyphicon glyphicon-ok-sign"></i> Procesar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_guardar2"     runat="server"  ToolTip="Guarda los cambios realizados al registro"   CssClass="btn btn-success btn-xs" ><i class="glyphicon glyphicon-ok-sign"></i> Guardar Todos</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_guardarDocumento"     runat="server"  ToolTip="Guarda los cambios realizados al registro"   CssClass="btn btn-success btn-xs" ><i class="glyphicon glyphicon-ok-sign"></i> Guardar  y agregar documento</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_cancelar"     runat="server"  ToolTip="Cancela los cambios realizados en registro"   CssClass="btn btn-warning btn-xs" ><i class="glyphicon glyphicon-remove-sign"></i> Cancelar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_Cerrar"     runat="server"  ToolTip="Cierra la venta actual"   CssClass="btn btn-warning btn-xs" ><i class="glyphicon glyphicon-remove-sign"></i> Cerrar</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_imprimir"     runat="server"  ToolTip="Muestra la vista previa de impresi&oacute;n de informes"   CssClass="btn btn-info btn-xs" Visible="false" ><i class="glyphicon glyphicon-print"></i> Imprimir</asp:LinkButton>
+
+<asp:LinkButton SkinID="lbn_aceptar"      runat="server"  ToolTip="Acepta los cambios"                                CssClass="btn btn-success"><i class="glyphicon glyphicon-ok-sign"></i> Aceptar</asp:LinkButton>
+
+<asp:Button SkinID="btn_Filtro" runat="server" CssClass="btn btn-info" ToolTip="Aplica el filtro de b&uacute;squeda seg&uacute;n el criterio seleccionado." Text="Aplicar filtro" />
+<asp:Button SkinID="btn_Todos" runat="server" CssClass="btn btn-inverse" Text="Todos" />
+<asp:Button SkinID="btn_Buscar" runat="server" CssClass="btn btn-info" Text="Buscar" />
+<asp:LinkButton SkinID="lb_Reestablecer"     runat="server"  ToolTip="Limpiar filtros de búsqueda"   CssClass="btn btn-inverse btn-xs" ><i class="glyphicon glyphicon-refresh"></i> Reestablecer</asp:LinkButton>
+
+<asp:LinkButton SkinID="lbn_imprimir_pdf" runat="server" ToolTip="Permite descargar el informe en formato PDF"      CssClass="btn btn-danger btn-xs " ><i class="glyphicon glyphicon-download-alt"></i> PDF</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_imprimir_doc" runat="server" ToolTip="Permite descargar el informe en formato Word"     CssClass="btn btn-info btn-xs " ><i class="glyphicon glyphicon-download-alt"></i> WORD</asp:LinkButton>
+<asp:LinkButton SkinID="lbn_imprimir_xls" runat="server" ToolTip="Permite descargar el informe en formato Excel"    CssClass="btn btn-success " ><i class="glyphicon glyphicon-download-alt"></i> EXCEL</asp:LinkButton>
+
+<asp:HyperLink  SkinID="lnk_imprimir_pdf" runat="server" ToolTip="Permite descargar el informe en formato PDF"      CssClass="btn btn-danger btn-xs "  Width="70px" ><i class="glyphicon glyphicon-download-alt"></i><br /> PDF</asp:HyperLink>
+<asp:HyperLink  SkinID="lnk_imprimir_doc" runat="server" ToolTip="Permite descargar el informe en formato Word"     CssClass="btn btn-info btn-xs "    Width="70px" ><i class="glyphicon glyphicon-download-alt"></i><br /> WORD</asp:HyperLink>
+<asp:HyperLink  SkinID="lnk_imprimir_xls" runat="server" ToolTip="Permite descargar el informe en formato Excel"    CssClass="btn btn-success btn-xs " Width="70px" ><i class="glyphicon glyphicon-download-alt"></i><br /> EXCEL</asp:HyperLink>
+
+<%--<asp:LinkButton ID="lb" runat="server" CssClass="btn btn-info"><i class="glyphicon glyphicon-search"></i> Buscar</asp:LinkButton>
+
+--%>
+
+
+<asp:LinkButton SkinID="tv_add_hijo" runat="server" CssClass="btn btn-default" ToolTip="Agregar Nodo Hijo" >
+    <img alt="Add Hijo" title="Agregar Nodo Hijo" src="/img/boton/tv_add_hijo.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_add_nodo_raiz" runat="server" CssClass="btn btn-default" ToolTip="Agregar Nodo Raiz" >
+    <img alt="Add Raiz" title="Agregar Nodo Raiz" src="/img/boton/tv_add_nodo_raiz.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_mover_izquierda" runat="server" CssClass="btn btn-default" ToolTip="Mover Nodo a la Izquierda" >
+    <img alt="Mover Izq" title="Mover Nodo a la Izquierda" src="/img/boton/tv_mover_izquierda.png" />
+</asp:LinkButton>
+
+
+<asp:LinkButton SkinID="tv_mover_derecha" runat="server" CssClass="btn btn-default" ToolTip="Mover Nodo a la Derecha" >
+    <img alt="Mover Der" title="Mover Nodo a la Derecha" src="/img/boton/tv_mover_derecha.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_eliminar_nodo" runat="server" CssClass="btn btn-default" ToolTip="Eliminar Nodo" >
+    <img alt="Eliminar" title="Eliminar Nodo" src="/img/boton/tv_eliminar_nodo.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_mover_arriba" runat="server" CssClass="btn btn-default" ToolTip="Mover Nodo Arriba" >
+    <img alt="Arriba" title="Mover Nodo Arriba" src="/img/boton/tv_mover_arriba.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_mover_abajo" runat="server" CssClass="btn btn-default" ToolTip="Mover Nodo Abajo" >
+    <img alt="Abajo" title="Mover Nodo Abajo" src="/img/boton/tv_mover_abajo.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_editar_nodo" runat="server" CssClass="btn btn-default" ToolTip="Editar Nodo" >
+    <img alt="Editar" title="Editar Nodo" src="/img/boton/tv_editar_nodo.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_guardar_nodo" runat="server" CssClass="btn btn-default" ToolTip="Guardar Nodo" >
+    <img alt="Guardar" title="Guardar Nodo" src="/img/boton/tv_guardar_nodo.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_examinar_archivos" runat="server" CssClass="btn btn-default" ToolTip="Examinar Archivos" >
+    <img alt="Examinar" title="Examinar Archivos" src="/img/boton/tv_examinar_archivos.png" />
+</asp:LinkButton>
+
+<asp:LinkButton SkinID="tv_actualizar_icono" runat="server" CssClass="btn btn-default" ToolTip="Actualizar Icono" >
+    <img alt="Actualizar Icono" title="Actualizar Icono" src="/img/boton/tv_actualizar_icono.png" />
+</asp:LinkButton>
+
+
+<asp:ValidatorCalloutExtender SkinID="vce_animado" runat="server" PopupPosition="BottomLeft">
+    <Animations>                            
+        <OnShow>
+            <Sequence>
+                <HideAction Visible="true" />                                
+                <Pulse Duration=".2" />
+            </Sequence>
+        </OnShow>
+        
+    </Animations>        
+</asp:ValidatorCalloutExtender>
+
+<asp:ListSearchExtender SkinID="lse_animado" runat="server" 
+                        PromptText="Digite el texto para buscar" 
+                        PromptCssClass="prompt_listas"  
+                        QueryPattern="Contains" 
+                        IsSorted="false" 
+                        QueryTimeout="0">
+    <Animations>                            
+        <OnShow>
+            <Sequence>
+                <HideAction Visible="true" />                                
+                <Pulse Duration=".2" />
+            </Sequence>
+        </OnShow>
+        <OnHide>
+            <Sequence>
+                <FadeOut Duration="1" MinimumOpacity="0" MaximumOpacity="1" />
+                <HideAction Visible="false" />
+            </Sequence>
+        </OnHide>                       
+    </Animations>        
+</asp:ListSearchExtender>
+
+<asp:ModalPopupExtender SkinID="mpe_animado" runat="server" >
+        <Animations>
+           <%-- <OnShowing>--%>
+                <%--<FadeIn Duration=".5" Fps="30" />--%>
+                <%--<Pulse Duration=".1" />--%>
+            <%--</OnShowing>--%>
+            <OnShown>
+                <%--<Move Horizontal="0" Vertical="-500" /> --%>
+                <FadeIn Duration="1" Fps="30" />
+                <%--<Pulse Duration=".1" />--%>
+            </OnShown>
+            <%-- neither animation works from code-behind --%>
+            <%--<OnHiding>
+                <FadeOut Duration=".5" Fps="30" />
+
+            </OnHiding>--%>
+            <OnHidden>
+                <FadeOut Duration="1" Fps="30" />
+            </OnHidden>
+        </Animations>
+    </asp:ModalPopupExtender>
+
+<asp:ModalPopupExtender SkinID="mpe_reporte" runat="server" >
+        <Animations>
+           <%-- <OnShowing>--%>
+                <%--<FadeIn Duration=".5" Fps="30" />--%>
+                <%--<Pulse Duration=".1" />--%>
+            <%--</OnShowing>--%>
+            <OnShown>
+                <%--<Move Horizontal="0" Vertical="-500" /> --%>
+                <FadeIn Duration="1" Fps="30" />
+                <%--<Pulse Duration=".1" />--%>
+            </OnShown>
+            <%-- neither animation works from code-behind --%>
+            <%--<OnHiding>
+                <FadeOut Duration=".5" Fps="30" />
+
+            </OnHiding>--%>
+            <OnHidden>
+                <FadeOut Duration="1" Fps="30" />
+            </OnHidden>
+        </Animations>
+    </asp:ModalPopupExtender>
+
+
+<ew:NumericBox 
+    SkinID="skin_entero" 
+    runat="server" 
+    PositiveNumber="True" 
+    RealNumber="False"
+    TextAlign="Left"
+    CssClass="form-control"
+    >
+</ew:NumericBox>
+
+
+<ew:NumericBox 
+    SkinID="skin_flotante" 
+    runat="server"     
+    RealNumber="True"
+    TextAlign="Left"
+    CssClass="form-control"
+    >
+</ew:NumericBox>
+
+<ew:NumericBox 
+    SkinID="skin_moneda" 
+    runat="server"     
+    RealNumber="True"
+    AutoFormatCurrency="True" 
+    DecimalPlaces="2"
+    TextAlign="Left"
+    CssClass="form-control"
+    >
+</ew:NumericBox>
+
+<ew:TimePicker 
+            SkinID="tim_Hora" runat="server" CssClass="reloj"  
+            AllowArbitraryText="true" DisableTextBoxEntry="false" ControlDisplay="TextBoxImage" 
+            NumberOfColumns="1" PopupLocation="Bottom" Width="100px"
+            LowerBoundTime="7:00" UpperBoundTime="18:00"
+            ImageUrl="/assets/img/reloj.png" 
+            ></ew:TimePicker>
+
+<ew:CalendarPopup 
+    SkinID="skin_calendario" 
+    runat="server"
+    CssClass="calendario"  
+    ControlDisplay="TextBoxImage" 
+    GoToTodayText="Hoy es:" 
+    ImageUrl="/assets/img/calendario.png" 
+
+    PopupLocation="Bottom" 
+    CalendarWidth="250" 
+    ClearDateText="Dejar Vacío" 
+    Culture="Spanish (El Salvador)" 
+    MonthYearApplyText="Aplicar" 
+    MonthYearCancelText="Cancelar" 
+    NullableLabelText="Seleccione una Fecha" 
+    Text="[ Y ]" 
+    Width="100px"     
+    DisableTextBoxEntry="False" 
+    Nullable="True" 
+    PadSingleDigits="True" 
+    ShowClearDate="True" 
+    ShowGoToToday="True" 
+    >
+        <MonthHeaderStyle           CssClass="calendario_header_mes"        />
+        <DayHeaderStyle             CssClass="calendario_header_dia"        />
+        <WeekdayStyle               CssClass="calendario_dia_semana"        />
+        <WeekendStyle               CssClass="calendario_fin_semana"        />
+        <OffMonthStyle              CssClass="calendario_otro_mes"          />
+        <TodayDayStyle              CssClass="calendario_dia_hoy"           />
+        <SelectedDateStyle          CssClass="calendario_dia_seleccionado"  />
+        <ClearDateStyle             CssClass="calendario_dia_limpio"        />        
+        <MonthYearItemStyle         CssClass="calendario_mes_ano"           />
+        <MonthYearSelectedItemStyle CssClass="calendario_mes_ano_selec"     />
+</ew:CalendarPopup>
+
+
+
+
+<ajax:ModalPopupExtender SkinID="mpe_campos" runat="server" TargetControlID="btn_campos_oculto"
+        PopupControlID="pnl_campos" PopupDragHandleControlID="pnl_campos_titulo" BackgroundCssClass="modalBackground"
+        >
+        <Animations>           
+            <OnShown>                
+                <Move Duration=".5" FPS ="30" Vertical= "-200" Horizontal ="0" unit ="px" />
+            </OnShown>            
+        </Animations>
+</ajax:ModalPopupExtender>

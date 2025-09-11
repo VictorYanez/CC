@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://soa.mop.gob.sv/mop/rh/Personal.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" />
+  <xs:element name="cargarFotografia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q1:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarFotografiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarFotografiaResult" nillable="true" type="q2:Fotografia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarDatosFotografias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q3:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarDatosFotografiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarDatosFotografiasResult" nillable="true" type="q4:DatosdeFoto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarPersonalUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q5:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarPersonalUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarPersonalUnidadResult" nillable="true" type="q6:ArrayOfPersonalUnidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarPersonalUnidadHijos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q7:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarPersonalUnidadHijosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarPersonalUnidadHijosResult" nillable="true" type="q8:ArrayOfPersonalUnidadHijos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUsuariosUnidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q9:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUsuariosUnidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarUsuariosUnidadResult" nillable="true" type="q10:ArrayOfUsuariosUnidad" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUsuariosUnidadHijos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parRRHH" nillable="true" type="q11:ParRRHH" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUsuariosUnidadHijosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarUsuariosUnidadHijosResult" nillable="true" type="q12:ArrayOfUsuariosUnidadHijos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUnidadesOrganizativas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarUnidadesOrganizativasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarUnidadesOrganizativasResult" nillable="true" type="q13:ArrayOfUnidad_Organizativa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarDatosPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarDatosPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cargarDatosPersonaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

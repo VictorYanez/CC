@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ParRRHH">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="_accion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParRRHH" nillable="true" type="tns:ParRRHH" />
+  <xs:complexType name="Fotografia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Foto" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fotografia" nillable="true" type="tns:Fotografia" />
+  <xs:complexType name="DatosdeFoto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosdeFoto" nillable="true" type="tns:DatosdeFoto" />
+  <xs:complexType name="ArrayOfPersonalUnidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonalUnidad" nillable="true" type="tns:PersonalUnidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonalUnidad" nillable="true" type="tns:ArrayOfPersonalUnidad" />
+  <xs:complexType name="PersonalUnidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Jefe" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUnidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalUnidad" nillable="true" type="tns:PersonalUnidad" />
+  <xs:complexType name="ArrayOfPersonalUnidadHijos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonalUnidadHijos" nillable="true" type="tns:PersonalUnidadHijos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonalUnidadHijos" nillable="true" type="tns:ArrayOfPersonalUnidadHijos" />
+  <xs:complexType name="PersonalUnidadHijos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jefe" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUnidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalUnidadHijos" nillable="true" type="tns:PersonalUnidadHijos" />
+  <xs:complexType name="ArrayOfUsuariosUnidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuariosUnidad" nillable="true" type="tns:UsuariosUnidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuariosUnidad" nillable="true" type="tns:ArrayOfUsuariosUnidad" />
+  <xs:complexType name="UsuariosUnidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Jefe" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUnidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuariosUnidad" nillable="true" type="tns:UsuariosUnidad" />
+  <xs:complexType name="ArrayOfUsuariosUnidadHijos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuariosUnidadHijos" nillable="true" type="tns:UsuariosUnidadHijos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuariosUnidadHijos" nillable="true" type="tns:ArrayOfUsuariosUnidadHijos" />
+  <xs:complexType name="UsuariosUnidadHijos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUnidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Jefe" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUnidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuariosUnidadHijos" nillable="true" type="tns:UsuariosUnidadHijos" />
+  <xs:complexType name="ArrayOfUnidad_Organizativa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Unidad_Organizativa" nillable="true" type="tns:Unidad_Organizativa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnidad_Organizativa" nillable="true" type="tns:ArrayOfUnidad_Organizativa" />
+  <xs:complexType name="Unidad_Organizativa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad_Personas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_Funcional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Creacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Id_Padre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Tipo_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Jerarquia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre_Unidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero_Acuerdo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Unidad_Organizativa" nillable="true" type="tns:Unidad_Organizativa" />
+</xs:schema>

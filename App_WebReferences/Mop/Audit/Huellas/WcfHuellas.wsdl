@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfHuellas" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/audit/Huellas.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/audit/Huellas.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/audit/Huellas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Audit.ENT" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfHuellas_registrarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_actualizarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_actualizarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarNavegacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarNavegacion" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarNavegacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarNavegacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarMovimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarMovimiento" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarMovimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarMovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarActividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarActividad" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_registrarActividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarActividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:auditarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:auditarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarSesionesUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:auditarSesionesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarSesionesUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:auditarSesionesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarNavegacionSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:auditarNavegacionSesion" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarNavegacionSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:auditarNavegacionSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarMovimientoNavegacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:auditarMovimientoNavegacion" />
+  </wsdl:message>
+  <wsdl:message name="IWcfHuellas_auditarMovimientoNavegacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:auditarMovimientoNavegacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfHuellas">
+    <wsdl:operation name="registrarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/registrarSesion" message="tns:IWcfHuellas_registrarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/registrarSesionResponse" message="tns:IWcfHuellas_registrarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/actualizarSesion" message="tns:IWcfHuellas_actualizarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/actualizarSesionResponse" message="tns:IWcfHuellas_actualizarSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarNavegacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/registrarNavegacion" message="tns:IWcfHuellas_registrarNavegacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/registrarNavegacionResponse" message="tns:IWcfHuellas_registrarNavegacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarMovimiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/registrarMovimiento" message="tns:IWcfHuellas_registrarMovimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/registrarMovimientoResponse" message="tns:IWcfHuellas_registrarMovimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarActividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/registrarActividad" message="tns:IWcfHuellas_registrarActividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/registrarActividadResponse" message="tns:IWcfHuellas_registrarActividad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="auditarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/auditarUsuarios" message="tns:IWcfHuellas_auditarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/auditarUsuariosResponse" message="tns:IWcfHuellas_auditarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="auditarSesionesUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/auditarSesionesUsuario" message="tns:IWcfHuellas_auditarSesionesUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/auditarSesionesUsuarioResponse" message="tns:IWcfHuellas_auditarSesionesUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="auditarNavegacionSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/auditarNavegacionSesion" message="tns:IWcfHuellas_auditarNavegacionSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/auditarNavegacionSesionResponse" message="tns:IWcfHuellas_auditarNavegacionSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="auditarMovimientoNavegacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfHuellas/auditarMovimientoNavegacion" message="tns:IWcfHuellas_auditarMovimientoNavegacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfHuellas/auditarMovimientoNavegacionResponse" message="tns:IWcfHuellas_auditarMovimientoNavegacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfHuellas" type="tns:IWcfHuellas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarSesion">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/registrarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSesion">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/actualizarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarNavegacion">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/registrarNavegacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarMovimiento">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/registrarMovimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarActividad">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/registrarActividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/auditarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditarSesionesUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/auditarSesionesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditarNavegacionSesion">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/auditarNavegacionSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditarMovimientoNavegacion">
+      <soap:operation soapAction="http://tempuri.org/IWcfHuellas/auditarMovimientoNavegacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfHuellas">
+    <wsdl:port name="BasicHttpBinding_IWcfHuellas" binding="tns:BasicHttpBinding_IWcfHuellas">
+      <soap:address location="http://soa.mop.gob.sv/mop/audit/Huellas.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

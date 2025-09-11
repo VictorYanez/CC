@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfMaestra" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Maestra.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Maestra.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Maestra.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Seg.ENT" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfMaestra_Sistema_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Sistema_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sistema_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Menu_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Menu_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Detalle_Perfil_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Detalle_Perfil_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_DetallePerfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetallePerfil" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_DetallePerfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetallePerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_US_InputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_US" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Usuario_US_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Usuario_USResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Perfil_Usuario_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Perfil_Usuario_BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_PerfilesDeUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:PerfilesDeUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_PerfilesDeUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PerfilesDeUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_I_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_I" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_I_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_IResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_IL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_IL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_IL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_ILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_A_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_A" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_AL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_AL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_AL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_ALResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_E_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_E" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_E_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_EResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_EL_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_EL" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_EL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_ELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_B_InputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_B" />
+  </wsdl:message>
+  <wsdl:message name="IWcfMaestra_Parametros_B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Parametros_BResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfMaestra">
+    <wsdl:operation name="Sistema_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_I" message="tns:IWcfMaestra_Sistema_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_IResponse" message="tns:IWcfMaestra_Sistema_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_IL" message="tns:IWcfMaestra_Sistema_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_ILResponse" message="tns:IWcfMaestra_Sistema_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_A" message="tns:IWcfMaestra_Sistema_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_AResponse" message="tns:IWcfMaestra_Sistema_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_AL" message="tns:IWcfMaestra_Sistema_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_ALResponse" message="tns:IWcfMaestra_Sistema_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_E" message="tns:IWcfMaestra_Sistema_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_EResponse" message="tns:IWcfMaestra_Sistema_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_EL" message="tns:IWcfMaestra_Sistema_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_ELResponse" message="tns:IWcfMaestra_Sistema_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_B" message="tns:IWcfMaestra_Sistema_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Sistema_BResponse" message="tns:IWcfMaestra_Sistema_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_I" message="tns:IWcfMaestra_Menu_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_IResponse" message="tns:IWcfMaestra_Menu_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_IL" message="tns:IWcfMaestra_Menu_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_ILResponse" message="tns:IWcfMaestra_Menu_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_A" message="tns:IWcfMaestra_Menu_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_AResponse" message="tns:IWcfMaestra_Menu_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_AL" message="tns:IWcfMaestra_Menu_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_ALResponse" message="tns:IWcfMaestra_Menu_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_E" message="tns:IWcfMaestra_Menu_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_EResponse" message="tns:IWcfMaestra_Menu_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_EL" message="tns:IWcfMaestra_Menu_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_ELResponse" message="tns:IWcfMaestra_Menu_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Menu_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_B" message="tns:IWcfMaestra_Menu_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Menu_BResponse" message="tns:IWcfMaestra_Menu_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_I" message="tns:IWcfMaestra_Perfil_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_IResponse" message="tns:IWcfMaestra_Perfil_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_IL" message="tns:IWcfMaestra_Perfil_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_ILResponse" message="tns:IWcfMaestra_Perfil_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_A" message="tns:IWcfMaestra_Perfil_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_AResponse" message="tns:IWcfMaestra_Perfil_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_AL" message="tns:IWcfMaestra_Perfil_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_ALResponse" message="tns:IWcfMaestra_Perfil_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_E" message="tns:IWcfMaestra_Perfil_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_EResponse" message="tns:IWcfMaestra_Perfil_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_EL" message="tns:IWcfMaestra_Perfil_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_ELResponse" message="tns:IWcfMaestra_Perfil_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_B" message="tns:IWcfMaestra_Perfil_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_BResponse" message="tns:IWcfMaestra_Perfil_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_I" message="tns:IWcfMaestra_Detalle_Perfil_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_IResponse" message="tns:IWcfMaestra_Detalle_Perfil_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_IL" message="tns:IWcfMaestra_Detalle_Perfil_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_ILResponse" message="tns:IWcfMaestra_Detalle_Perfil_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_A" message="tns:IWcfMaestra_Detalle_Perfil_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_AResponse" message="tns:IWcfMaestra_Detalle_Perfil_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_AL" message="tns:IWcfMaestra_Detalle_Perfil_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_ALResponse" message="tns:IWcfMaestra_Detalle_Perfil_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_E" message="tns:IWcfMaestra_Detalle_Perfil_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_EResponse" message="tns:IWcfMaestra_Detalle_Perfil_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_EL" message="tns:IWcfMaestra_Detalle_Perfil_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_ELResponse" message="tns:IWcfMaestra_Detalle_Perfil_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_B" message="tns:IWcfMaestra_Detalle_Perfil_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Detalle_Perfil_BResponse" message="tns:IWcfMaestra_Detalle_Perfil_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetallePerfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/DetallePerfil" message="tns:IWcfMaestra_DetallePerfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/DetallePerfilResponse" message="tns:IWcfMaestra_DetallePerfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_I" message="tns:IWcfMaestra_Usuario_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_IResponse" message="tns:IWcfMaestra_Usuario_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_IL" message="tns:IWcfMaestra_Usuario_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_ILResponse" message="tns:IWcfMaestra_Usuario_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_A" message="tns:IWcfMaestra_Usuario_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_AResponse" message="tns:IWcfMaestra_Usuario_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_AL" message="tns:IWcfMaestra_Usuario_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_ALResponse" message="tns:IWcfMaestra_Usuario_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_E" message="tns:IWcfMaestra_Usuario_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_EResponse" message="tns:IWcfMaestra_Usuario_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_EL" message="tns:IWcfMaestra_Usuario_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_ELResponse" message="tns:IWcfMaestra_Usuario_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_B" message="tns:IWcfMaestra_Usuario_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_BResponse" message="tns:IWcfMaestra_Usuario_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_US">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_US" message="tns:IWcfMaestra_Usuario_US_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Usuario_USResponse" message="tns:IWcfMaestra_Usuario_US_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_I" message="tns:IWcfMaestra_Perfil_Usuario_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_IResponse" message="tns:IWcfMaestra_Perfil_Usuario_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_IL" message="tns:IWcfMaestra_Perfil_Usuario_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_ILResponse" message="tns:IWcfMaestra_Perfil_Usuario_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_A" message="tns:IWcfMaestra_Perfil_Usuario_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_AResponse" message="tns:IWcfMaestra_Perfil_Usuario_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_AL" message="tns:IWcfMaestra_Perfil_Usuario_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_ALResponse" message="tns:IWcfMaestra_Perfil_Usuario_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_E" message="tns:IWcfMaestra_Perfil_Usuario_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_EResponse" message="tns:IWcfMaestra_Perfil_Usuario_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_EL" message="tns:IWcfMaestra_Perfil_Usuario_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_ELResponse" message="tns:IWcfMaestra_Perfil_Usuario_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_B" message="tns:IWcfMaestra_Perfil_Usuario_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Perfil_Usuario_BResponse" message="tns:IWcfMaestra_Perfil_Usuario_B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerfilesDeUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/PerfilesDeUsuario" message="tns:IWcfMaestra_PerfilesDeUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/PerfilesDeUsuarioResponse" message="tns:IWcfMaestra_PerfilesDeUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_I">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_I" message="tns:IWcfMaestra_Parametros_I_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_IResponse" message="tns:IWcfMaestra_Parametros_I_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_IL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_IL" message="tns:IWcfMaestra_Parametros_IL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_ILResponse" message="tns:IWcfMaestra_Parametros_IL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_A" message="tns:IWcfMaestra_Parametros_A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_AResponse" message="tns:IWcfMaestra_Parametros_A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_AL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_AL" message="tns:IWcfMaestra_Parametros_AL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_ALResponse" message="tns:IWcfMaestra_Parametros_AL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_E">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_E" message="tns:IWcfMaestra_Parametros_E_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_EResponse" message="tns:IWcfMaestra_Parametros_E_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_EL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_EL" message="tns:IWcfMaestra_Parametros_EL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_ELResponse" message="tns:IWcfMaestra_Parametros_EL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_B" message="tns:IWcfMaestra_Parametros_B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfMaestra/Parametros_BResponse" message="tns:IWcfMaestra_Parametros_B_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfMaestra" type="tns:IWcfMaestra">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sistema_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sistema_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Sistema_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Menu_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Menu_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Detalle_Perfil_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Detalle_Perfil_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetallePerfil">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/DetallePerfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Usuario_US">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Usuario_US" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Perfil_Usuario_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Perfil_Usuario_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerfilesDeUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/PerfilesDeUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_I">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_I" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_IL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_IL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_A">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_AL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_AL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_E">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_E" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_EL">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_EL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Parametros_B">
+      <soap:operation soapAction="http://tempuri.org/IWcfMaestra/Parametros_B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfMaestra">
+    <wsdl:port name="BasicHttpBinding_IWcfMaestra" binding="tns:BasicHttpBinding_IWcfMaestra">
+      <soap:address location="http://soa.mop.gob.sv/mop/seg/Maestra.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

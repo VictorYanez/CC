@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfEnlaces" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/rh/Enlaces.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/rh/Enlaces.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/rh/Enlaces.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceI_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceI" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceIlst_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceIlst" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceIlst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceIlstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceA_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceA" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceAlst_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceAlst" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceAlst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceAlstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceE_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceE" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceElst_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceElst" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceElst_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceElstResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceB_InputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceB" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_unidadEnlaceB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:unidadEnlaceBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceTipos_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceTipos" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceTipos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceTiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceI_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceI" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceA_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceA" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceE_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceE" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceB_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceB" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlaceB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlaceBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlacesActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:enlacesActivos" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_enlacesActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enlacesActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_cargarTipo_Enlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:cargarTipo_Enlace" />
+  </wsdl:message>
+  <wsdl:message name="IWcfEnlaces_cargarTipo_Enlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cargarTipo_EnlaceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfEnlaces">
+    <wsdl:operation name="unidadEnlaceI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceI" message="tns:IWcfEnlaces_unidadEnlaceI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceIResponse" message="tns:IWcfEnlaces_unidadEnlaceI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceIlst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceIlst" message="tns:IWcfEnlaces_unidadEnlaceIlst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceIlstResponse" message="tns:IWcfEnlaces_unidadEnlaceIlst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceA" message="tns:IWcfEnlaces_unidadEnlaceA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceAResponse" message="tns:IWcfEnlaces_unidadEnlaceA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceAlst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceAlst" message="tns:IWcfEnlaces_unidadEnlaceAlst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceAlstResponse" message="tns:IWcfEnlaces_unidadEnlaceAlst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceE" message="tns:IWcfEnlaces_unidadEnlaceE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceEResponse" message="tns:IWcfEnlaces_unidadEnlaceE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceElst">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceElst" message="tns:IWcfEnlaces_unidadEnlaceElst_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceElstResponse" message="tns:IWcfEnlaces_unidadEnlaceElst_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceB" message="tns:IWcfEnlaces_unidadEnlaceB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/unidadEnlaceBResponse" message="tns:IWcfEnlaces_unidadEnlaceB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlaceTipos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceTipos" message="tns:IWcfEnlaces_enlaceTipos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceTiposResponse" message="tns:IWcfEnlaces_enlaceTipos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlaceI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceI" message="tns:IWcfEnlaces_enlaceI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceIResponse" message="tns:IWcfEnlaces_enlaceI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlaceA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceA" message="tns:IWcfEnlaces_enlaceA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceAResponse" message="tns:IWcfEnlaces_enlaceA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlaceE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceE" message="tns:IWcfEnlaces_enlaceE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceEResponse" message="tns:IWcfEnlaces_enlaceE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlaceB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceB" message="tns:IWcfEnlaces_enlaceB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlaceBResponse" message="tns:IWcfEnlaces_enlaceB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enlacesActivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/enlacesActivos" message="tns:IWcfEnlaces_enlacesActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/enlacesActivosResponse" message="tns:IWcfEnlaces_enlacesActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cargarTipo_Enlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfEnlaces/cargarTipo_Enlace" message="tns:IWcfEnlaces_cargarTipo_Enlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfEnlaces/cargarTipo_EnlaceResponse" message="tns:IWcfEnlaces_cargarTipo_Enlace_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfEnlaces" type="tns:IWcfEnlaces">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="unidadEnlaceI">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceIlst">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceIlst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceA">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceAlst">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceAlst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceE">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceElst">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceElst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unidadEnlaceB">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/unidadEnlaceB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlaceTipos">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlaceTipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlaceI">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlaceI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlaceA">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlaceA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlaceE">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlaceE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlaceB">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlaceB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enlacesActivos">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/enlacesActivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cargarTipo_Enlace">
+      <soap:operation soapAction="http://tempuri.org/IWcfEnlaces/cargarTipo_Enlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfEnlaces">
+    <wsdl:port name="BasicHttpBinding_IWcfEnlaces" binding="tns:BasicHttpBinding_IWcfEnlaces">
+      <soap:address location="http://soa.mop.gob.sv/mop/rh/Enlaces.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

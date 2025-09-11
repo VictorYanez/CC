@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://soa.mop.gob.sv/mop/rh/Enlaces.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" />
+  <xs:element name="unidadEnlaceI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="unidadEnlace" nillable="true" type="q1:UnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="unidadEnlaceIResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceIlst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="lstUnidadEnlace" nillable="true" type="q2:ArrayOfUnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceIlstResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="unidadEnlace" nillable="true" type="q3:UnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="unidadEnlaceAResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceAlst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="lstUnidadEnlace" nillable="true" type="q4:ArrayOfUnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceAlstResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="unidadEnlace" nillable="true" type="q5:UnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="unidadEnlaceEResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceElst">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="lstUnidadEnlace" nillable="true" type="q6:ArrayOfUnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceElstResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="unidadEnlace" nillable="true" type="q7:UnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unidadEnlaceBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="unidadEnlaceBResult" nillable="true" type="q8:ArrayOfUnidadEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceTipos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="tipo_enlace" nillable="true" type="q9:Tipo_Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceTiposResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlaceTiposResult" nillable="true" type="q10:ArrayOfTipo_Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlace" nillable="true" type="q11:Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enlaceIResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlace" nillable="true" type="q12:Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enlaceAResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlace" nillable="true" type="q13:Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="enlaceEResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlace" nillable="true" type="q14:Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlaceBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlaceBResult" nillable="true" type="q15:ArrayOfEnlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlacesActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="parEnlaces" nillable="true" type="q16:ParEnlaces" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enlacesActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="enlacesActivosResult" nillable="true" type="q17:ArrayOfEnlacesActivos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarTipo_Enlace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="tipo_Enlace" nillable="true" type="q18:Tipo_Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cargarTipo_EnlaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" minOccurs="0" name="cargarTipo_EnlaceResult" nillable="true" type="q19:ArrayOfTipo_Enlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

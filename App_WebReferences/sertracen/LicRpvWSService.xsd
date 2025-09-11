@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.model.lic.sertracen.sv.com/" targetNamespace="http://ws.model.lic.sertracen.sv.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="findByPersonaPK" type="tns:findByPersonaPK" />
+  <xs:element name="findByPersonaPKResponse" type="tns:findByPersonaPKResponse" />
+  <xs:element name="findConsultaByPoliza" type="tns:findConsultaByPoliza" />
+  <xs:element name="findConsultaByPolizaResponse" type="tns:findConsultaByPolizaResponse" />
+  <xs:element name="findControlCharlasByNroDocumento" type="tns:findControlCharlasByNroDocumento" />
+  <xs:element name="findControlCharlasByNroDocumentoResponse" type="tns:findControlCharlasByNroDocumentoResponse" />
+  <xs:element name="findDuplicidadByCaracteristicas" type="tns:findDuplicidadByCaracteristicas" />
+  <xs:element name="findDuplicidadByCaracteristicasResponse" type="tns:findDuplicidadByCaracteristicasResponse" />
+  <xs:element name="findEsquelasByVehNroPlaca" type="tns:findEsquelasByVehNroPlaca" />
+  <xs:element name="findEsquelasByVehNroPlacaResponse" type="tns:findEsquelasByVehNroPlacaResponse" />
+  <xs:element name="findExperticiasByIdVehiculo" type="tns:findExperticiasByIdVehiculo" />
+  <xs:element name="findExperticiasByIdVehiculoResponse" type="tns:findExperticiasByIdVehiculoResponse" />
+  <xs:element name="findHistorialEsquelaByDoc" type="tns:findHistorialEsquelaByDoc" />
+  <xs:element name="findHistorialEsquelaByDocResponse" type="tns:findHistorialEsquelaByDocResponse" />
+  <xs:element name="findOficiosEsquelaRemitidosVMT" type="tns:findOficiosEsquelaRemitidosVMT" />
+  <xs:element name="findOficiosEsquelaRemitidosVMTResponse" type="tns:findOficiosEsquelaRemitidosVMTResponse" />
+  <xs:element name="findOficiosRemitidosVMT" type="tns:findOficiosRemitidosVMT" />
+  <xs:element name="findOficiosRemitidosVMTResponse" type="tns:findOficiosRemitidosVMTResponse" />
+  <xs:element name="findPagoPlazoEsquelasByDoc" type="tns:findPagoPlazoEsquelasByDoc" />
+  <xs:element name="findPagoPlazoEsquelasByDocResponse" type="tns:findPagoPlazoEsquelasByDocResponse" />
+  <xs:element name="findPrevencionesByIdVehiculo" type="tns:findPrevencionesByIdVehiculo" />
+  <xs:element name="findPrevencionesByIdVehiculoResponse" type="tns:findPrevencionesByIdVehiculoResponse" />
+  <xs:element name="findProByNroDocumento" type="tns:findProByNroDocumento" />
+  <xs:element name="findProByNroDocumentoResponse" type="tns:findProByNroDocumentoResponse" />
+  <xs:element name="findRestriccionesByIdVehiculo" type="tns:findRestriccionesByIdVehiculo" />
+  <xs:element name="findRestriccionesByIdVehiculoResponse" type="tns:findRestriccionesByIdVehiculoResponse" />
+  <xs:element name="findRestriccionesByNroDocumento" type="tns:findRestriccionesByNroDocumento" />
+  <xs:element name="findRestriccionesByNroDocumentoResponse" type="tns:findRestriccionesByNroDocumentoResponse" />
+  <xs:element name="findRutaByCodigoVmt" type="tns:findRutaByCodigoVmt" />
+  <xs:element name="findRutaByCodigoVmtResponse" type="tns:findRutaByCodigoVmtResponse" />
+  <xs:element name="findValidaPMCaracteristicas" type="tns:findValidaPMCaracteristicas" />
+  <xs:element name="findValidaPMCaracteristicasResponse" type="tns:findValidaPMCaracteristicasResponse" />
+  <xs:element name="findVehByDoc" type="tns:findVehByDoc" />
+  <xs:element name="findVehByDocResponse" type="tns:findVehByDocResponse" />
+  <xs:element name="findVehByVehNroDePlaca" type="tns:findVehByVehNroDePlaca" />
+  <xs:element name="findVehByVehNroDePlacaResponse" type="tns:findVehByVehNroDePlacaResponse" />
+  <xs:element name="findVehiculoAsociadoLineaByVehNroPlaca" type="tns:findVehiculoAsociadoLineaByVehNroPlaca" />
+  <xs:element name="findVehiculoAsociadoLineaByVehNroPlacaResponse" type="tns:findVehiculoAsociadoLineaByVehNroPlacaResponse" />
+  <xs:element name="findVehiculoLineaByCodigoVmt" type="tns:findVehiculoLineaByCodigoVmt" />
+  <xs:element name="findVehiculoLineaByCodigoVmtResponse" type="tns:findVehiculoLineaByCodigoVmtResponse" />
+  <xs:element name="findVehiculoLineaByVehNroPlaca" type="tns:findVehiculoLineaByVehNroPlaca" />
+  <xs:element name="findVehiculoLineaByVehNroPlacaResponse" type="tns:findVehiculoLineaByVehNroPlacaResponse" />
+  <xs:complexType name="findOficiosRemitidosVMT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaOficio" type="xs:string" />
+      <xs:element minOccurs="0" name="origen" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findOficiosRemitidosVMTResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:oficiosEnvioEsquelasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oficiosEnvioEsquelasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="oeeFechaOficio" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeNomDelegacion" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeNroDelegacion" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeNroOficio" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeOrigen" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeTotalEsqConsistentes" type="xs:string" />
+      <xs:element minOccurs="0" name="oeeTotalEsqInConsistentes" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findExperticiasByIdVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idVehiculo" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findExperticiasByIdVehiculoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:resultadoExperticiaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="resultadoExperticiaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cexEstadoExperticia" type="xs:string" />
+      <xs:element minOccurs="0" name="cexFechaExperticia" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cexMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="cexNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="cexVehId" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findHistorialEsquelaByDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findHistorialEsquelaByDocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:controlDeEsquelas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="controlDeEsquelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ctrlEsqMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionFalta" type="xs:string" />
+      <xs:element minOccurs="0" name="documentoRelacionado" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="falta" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaApelacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaImposicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPago" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="montoAPagar" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nivel" type="xs:string" />
+      <xs:element minOccurs="0" name="nroEsquela" type="xs:string" />
+      <xs:element minOccurs="0" name="recargo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRestriccionesByNroDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroNit" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRestriccionesByNroDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:restriccionesLicenciasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="restriccionesLicenciasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pcaDescripcionRestriccion" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaFechaAntecedente" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="pcaFechaLevantamiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="pcaFechaRestriccion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="pcaMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaNroDeDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaObservaciones" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaOrganismo" type="xs:string" />
+      <xs:element minOccurs="0" name="pcaUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehByDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehByDocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:vehiculosPropietariosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculosPropietariosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="proIdVehiculo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="proMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="proNitPropietario" type="xs:string" />
+      <xs:element minOccurs="0" name="proNroPlaca" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findDuplicidadByCaracteristicas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idVehiculo" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findDuplicidadByCaracteristicasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:vehiculosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vehAduana" type="xs:string" />
+      <xs:element minOccurs="0" name="vehAnoDeFabricacion" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehCantidadDeCilindros" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehCantidadDePuertas" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehCapacidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehCeroKilometraje" type="xs:string" />
+      <xs:element minOccurs="0" name="vehCilindrada" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehClase" type="xs:string" />
+      <xs:element minOccurs="0" name="vehColores" type="xs:string" />
+      <xs:element minOccurs="0" name="vehCombustible" type="xs:string" />
+      <xs:element minOccurs="0" name="vehDesCapacidad" type="xs:string" />
+      <xs:element minOccurs="0" name="vehEmision" type="xs:string" />
+      <xs:element minOccurs="0" name="vehEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="vehExcento" type="xs:string" />
+      <xs:element minOccurs="0" name="vehFechaDeImportacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vehFechaDeIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vehId" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehImpValorDelVehiculo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vehMarca" type="xs:string" />
+      <xs:element minOccurs="0" name="vehMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="vehModelo" type="xs:string" />
+      <xs:element minOccurs="0" name="vehNroDeChasis" type="xs:string" />
+      <xs:element minOccurs="0" name="vehNroDeChasisVin" type="xs:string" />
+      <xs:element minOccurs="0" name="vehNroDeImportacion" type="xs:string" />
+      <xs:element minOccurs="0" name="vehNroDeMotor" type="xs:string" />
+      <xs:element minOccurs="0" name="vehNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="vehPertenencia" type="xs:string" />
+      <xs:element minOccurs="0" name="vehProNroDeDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="vehProNroDocumentoAPlazos" type="xs:string" />
+      <xs:element minOccurs="0" name="vehProTdoCodigo" type="xs:string" />
+      <xs:element minOccurs="0" name="vehProTdoCodigoAPlazos" type="xs:string" />
+      <xs:element minOccurs="0" name="vehTarjetaFechaDeVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vehTipoPlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="vehTplCodigo" type="xs:string" />
+      <xs:element minOccurs="0" name="vehValorDelVehiculo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehByVehNroDePlaca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vehNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehByVehNroDePlacaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:vehiculosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPagoPlazoEsquelasByDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPagoPlazoEsquelasByDocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pagoPlazosEsquelas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pagoPlazosEsquelas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="montoTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nroCompromiso" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ppeMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="ultimaFechaPago" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findValidaPMCaracteristicas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroPoliza" type="xs:string" />
+      <xs:element minOccurs="0" name="pfechaImport" type="xs:string" />
+      <xs:element minOccurs="0" name="nroAduana" type="xs:string" />
+      <xs:element minOccurs="0" name="nroSerial" type="xs:string" />
+      <xs:element minOccurs="0" name="nroCorrelativo" type="xs:string" />
+      <xs:element minOccurs="0" name="nroBulto" type="xs:string" />
+      <xs:element minOccurs="0" name="nroChasis" type="xs:string" />
+      <xs:element minOccurs="0" name="nroChasisVin" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findValidaPMCaracteristicasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:aduanasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aduanasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="proMensajeRetorno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findByPersonaPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoLic" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findByPersonaPKResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:licencias" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="licencias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="licApellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="licApellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="licCategorias" type="xs:string" />
+      <xs:element minOccurs="0" name="licDireccion" type="xs:string" />
+      <xs:element minOccurs="0" name="licFechaEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="licFechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="licMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="licMensajeVigencia" type="xs:string" />
+      <xs:element minOccurs="0" name="licNombre" type="xs:string" />
+      <xs:element minOccurs="0" name="licNroDeSello" type="xs:string" />
+      <xs:element minOccurs="0" name="licPerNroDeDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="licTelefono" type="xs:string" />
+      <xs:element minOccurs="0" name="licTipoLicencia" type="xs:string" />
+      <xs:element minOccurs="0" name="licTramite" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRutaByCodigoVmt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoVmt" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRutaByCodigoVmtResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rutasTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rutasTransporteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rtpCajaUnica" type="xs:decimal" />
+      <xs:element minOccurs="0" name="rtpCategoria" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpCodigoVmt" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpDepartamento" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpRecorrido" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpRuta" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpServicio" type="xs:string" />
+      <xs:element minOccurs="0" name="rtpTipoTrans" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPrevencionesByIdVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idVehiculo" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findPrevencionesByIdVehiculoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prevencionesVehiculosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prevencionesVehiculosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vcpDescripcionPrevencion" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpFechaActivacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vcpFechaResuelve" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vcpMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpObservacionDesactivacion" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpTraCodigo" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpTraDescripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="vcpVehId" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoAsociadoLineaByVehNroPlaca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vehNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoAsociadoLineaByVehNroPlacaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:lineaTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaTransporteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaternoCon" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaternoCon" type="xs:string" />
+      <xs:element minOccurs="0" name="categoria" type="xs:string" />
+      <xs:element minOccurs="0" name="certificadoCajaUnica" type="xs:string" />
+      <xs:element minOccurs="0" name="claseServicio" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoVmt" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento" type="xs:string" />
+      <xs:element minOccurs="0" name="destino" type="xs:string" />
+      <xs:element minOccurs="0" name="documentoConcesionario" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaDeConcesion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaResolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="linMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="lineaId" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nombreConcesionario" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDeContrato" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="origen" type="xs:string" />
+      <xs:element minOccurs="0" name="recorrido" type="xs:string" />
+      <xs:element minOccurs="0" name="referenciaResolucion" type="xs:string" />
+      <xs:element minOccurs="0" name="ruta" type="xs:string" />
+      <xs:element minOccurs="0" name="servicio" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoPlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoSistema" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoSistemaDesc" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoTransporte" type="xs:string" />
+      <xs:element minOccurs="0" name="vehiculoId" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vliEstado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findControlCharlasByNroDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findControlCharlasByNroDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:controlCharlasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="controlCharlasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ccrDesactivacion" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrEscuela" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrFechaActivacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ccrFechaDesactivacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ccrFechaResultado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ccrNivel" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrObservaciones" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrPeriodo" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrResultado" type="xs:string" />
+      <xs:element minOccurs="0" name="ccrTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ccrUsuarioDesactivacion" type="xs:string" />
+      <xs:element minOccurs="0" name="ctrlCharMensajeRetorno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findEsquelasByVehNroPlaca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vehNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findEsquelasByVehNroPlacaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:esquelasPlacaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="esquelasPlacaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionFalta" type="xs:string" />
+      <xs:element minOccurs="0" name="documentoRelacionado" type="xs:string" />
+      <xs:element minOccurs="0" name="esqPlaMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="falta" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaApelacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaImposicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPago" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="montoAPagar" type="xs:decimal" />
+      <xs:element minOccurs="0" name="nivel" type="xs:string" />
+      <xs:element minOccurs="0" name="nroEsquela" type="xs:string" />
+      <xs:element minOccurs="0" name="recargo" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findOficiosEsquelaRemitidosVMT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDelegacion" type="xs:string" />
+      <xs:element minOccurs="0" name="nroOficio" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaOficio" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findOficiosEsquelaRemitidosVMTResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:controlDeEsquelasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="controlDeEsquelasDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cdeCodigoFalta" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeDescripcionFalta" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeFechaEsquela" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeNomInfractor" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeNroEsquela" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeNroLicencia" type="xs:string" />
+      <xs:element minOccurs="0" name="cdeNroPlaca" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findConsultaByPoliza">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pfechaImport" type="xs:string" />
+      <xs:element minOccurs="0" name="nroAduana" type="xs:string" />
+      <xs:element minOccurs="0" name="nroSerial" type="xs:string" />
+      <xs:element minOccurs="0" name="nroCorrelativo" type="xs:string" />
+      <xs:element minOccurs="0" name="nroBulto" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findConsultaByPolizaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:aduanasDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoLineaByVehNroPlaca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vehNroDePlaca" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoLineaByVehNroPlacaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:lineaTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRestriccionesByIdVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idVehiculo" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRestriccionesByIdVehiculoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:restriccionesVehiculosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="restriccionesVehiculosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vcaDescripcionRestriccion" type="xs:string" />
+      <xs:element minOccurs="0" name="vcaEstado" type="xs:string" />
+      <xs:element minOccurs="0" name="vcaFechaAntecedente" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vcaFechaInactivacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vcaFechaRestriccion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vcaMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="vcaObservaciones" type="xs:string" />
+      <xs:element minOccurs="0" name="vcaOrganismoResponsable" type="xs:string" />
+      <xs:element minOccurs="0" name="vcaUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findProByNroDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findProByNroDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:propietariosVehiculosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="propietariosVehiculosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento" type="xs:string" />
+      <xs:element minOccurs="0" name="municipio" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreRazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="nroDeDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="proMensajeRetorno" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDeDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoLineaByCodigoVmt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoVmt" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="direccionIp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVehiculoLineaByCodigoVmtResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:lineaTransporteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.model.lic.sertracen.sv.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="LicRpvWSService" targetNamespace="http://ws.model.lic.sertracen.sv.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://vmt.sertracen.com.sv:8383/LicRpvWS/LicRpvWSService?xsd=1" namespace="http://ws.model.lic.sertracen.sv.com/" />
+    </xsd:schema>
+  </types>
+  <message name="findByPersonaPK">
+    <part name="parameters" element="tns:findByPersonaPK" />
+  </message>
+  <message name="findByPersonaPKResponse">
+    <part name="parameters" element="tns:findByPersonaPKResponse" />
+  </message>
+  <message name="findHistorialEsquelaByDoc">
+    <part name="parameters" element="tns:findHistorialEsquelaByDoc" />
+  </message>
+  <message name="findHistorialEsquelaByDocResponse">
+    <part name="parameters" element="tns:findHistorialEsquelaByDocResponse" />
+  </message>
+  <message name="findPagoPlazoEsquelasByDoc">
+    <part name="parameters" element="tns:findPagoPlazoEsquelasByDoc" />
+  </message>
+  <message name="findPagoPlazoEsquelasByDocResponse">
+    <part name="parameters" element="tns:findPagoPlazoEsquelasByDocResponse" />
+  </message>
+  <message name="findProByNroDocumento">
+    <part name="parameters" element="tns:findProByNroDocumento" />
+  </message>
+  <message name="findProByNroDocumentoResponse">
+    <part name="parameters" element="tns:findProByNroDocumentoResponse" />
+  </message>
+  <message name="findVehByVehNroDePlaca">
+    <part name="parameters" element="tns:findVehByVehNroDePlaca" />
+  </message>
+  <message name="findVehByVehNroDePlacaResponse">
+    <part name="parameters" element="tns:findVehByVehNroDePlacaResponse" />
+  </message>
+  <message name="findVehiculoLineaByVehNroPlaca">
+    <part name="parameters" element="tns:findVehiculoLineaByVehNroPlaca" />
+  </message>
+  <message name="findVehiculoLineaByVehNroPlacaResponse">
+    <part name="parameters" element="tns:findVehiculoLineaByVehNroPlacaResponse" />
+  </message>
+  <message name="findVehiculoAsociadoLineaByVehNroPlaca">
+    <part name="parameters" element="tns:findVehiculoAsociadoLineaByVehNroPlaca" />
+  </message>
+  <message name="findVehiculoAsociadoLineaByVehNroPlacaResponse">
+    <part name="parameters" element="tns:findVehiculoAsociadoLineaByVehNroPlacaResponse" />
+  </message>
+  <message name="findVehiculoLineaByCodigoVmt">
+    <part name="parameters" element="tns:findVehiculoLineaByCodigoVmt" />
+  </message>
+  <message name="findVehiculoLineaByCodigoVmtResponse">
+    <part name="parameters" element="tns:findVehiculoLineaByCodigoVmtResponse" />
+  </message>
+  <message name="findEsquelasByVehNroPlaca">
+    <part name="parameters" element="tns:findEsquelasByVehNroPlaca" />
+  </message>
+  <message name="findEsquelasByVehNroPlacaResponse">
+    <part name="parameters" element="tns:findEsquelasByVehNroPlacaResponse" />
+  </message>
+  <message name="findControlCharlasByNroDocumento">
+    <part name="parameters" element="tns:findControlCharlasByNroDocumento" />
+  </message>
+  <message name="findControlCharlasByNroDocumentoResponse">
+    <part name="parameters" element="tns:findControlCharlasByNroDocumentoResponse" />
+  </message>
+  <message name="findRutaByCodigoVmt">
+    <part name="parameters" element="tns:findRutaByCodigoVmt" />
+  </message>
+  <message name="findRutaByCodigoVmtResponse">
+    <part name="parameters" element="tns:findRutaByCodigoVmtResponse" />
+  </message>
+  <message name="findPrevencionesByIdVehiculo">
+    <part name="parameters" element="tns:findPrevencionesByIdVehiculo" />
+  </message>
+  <message name="findPrevencionesByIdVehiculoResponse">
+    <part name="parameters" element="tns:findPrevencionesByIdVehiculoResponse" />
+  </message>
+  <message name="findRestriccionesByIdVehiculo">
+    <part name="parameters" element="tns:findRestriccionesByIdVehiculo" />
+  </message>
+  <message name="findRestriccionesByIdVehiculoResponse">
+    <part name="parameters" element="tns:findRestriccionesByIdVehiculoResponse" />
+  </message>
+  <message name="findRestriccionesByNroDocumento">
+    <part name="parameters" element="tns:findRestriccionesByNroDocumento" />
+  </message>
+  <message name="findRestriccionesByNroDocumentoResponse">
+    <part name="parameters" element="tns:findRestriccionesByNroDocumentoResponse" />
+  </message>
+  <message name="findExperticiasByIdVehiculo">
+    <part name="parameters" element="tns:findExperticiasByIdVehiculo" />
+  </message>
+  <message name="findExperticiasByIdVehiculoResponse">
+    <part name="parameters" element="tns:findExperticiasByIdVehiculoResponse" />
+  </message>
+  <message name="findVehByDoc">
+    <part name="parameters" element="tns:findVehByDoc" />
+  </message>
+  <message name="findVehByDocResponse">
+    <part name="parameters" element="tns:findVehByDocResponse" />
+  </message>
+  <message name="findDuplicidadByCaracteristicas">
+    <part name="parameters" element="tns:findDuplicidadByCaracteristicas" />
+  </message>
+  <message name="findDuplicidadByCaracteristicasResponse">
+    <part name="parameters" element="tns:findDuplicidadByCaracteristicasResponse" />
+  </message>
+  <message name="findConsultaByPoliza">
+    <part name="parameters" element="tns:findConsultaByPoliza" />
+  </message>
+  <message name="findConsultaByPolizaResponse">
+    <part name="parameters" element="tns:findConsultaByPolizaResponse" />
+  </message>
+  <message name="findValidaPMCaracteristicas">
+    <part name="parameters" element="tns:findValidaPMCaracteristicas" />
+  </message>
+  <message name="findValidaPMCaracteristicasResponse">
+    <part name="parameters" element="tns:findValidaPMCaracteristicasResponse" />
+  </message>
+  <message name="findOficiosRemitidosVMT">
+    <part name="parameters" element="tns:findOficiosRemitidosVMT" />
+  </message>
+  <message name="findOficiosRemitidosVMTResponse">
+    <part name="parameters" element="tns:findOficiosRemitidosVMTResponse" />
+  </message>
+  <message name="findOficiosEsquelaRemitidosVMT">
+    <part name="parameters" element="tns:findOficiosEsquelaRemitidosVMT" />
+  </message>
+  <message name="findOficiosEsquelaRemitidosVMTResponse">
+    <part name="parameters" element="tns:findOficiosEsquelaRemitidosVMTResponse" />
+  </message>
+  <portType name="LicRpvWS">
+    <operation name="findByPersonaPK">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findByPersonaPKRequest" message="tns:findByPersonaPK" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findByPersonaPKResponse" message="tns:findByPersonaPKResponse" />
+    </operation>
+    <operation name="findHistorialEsquelaByDoc">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findHistorialEsquelaByDocRequest" message="tns:findHistorialEsquelaByDoc" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findHistorialEsquelaByDocResponse" message="tns:findHistorialEsquelaByDocResponse" />
+    </operation>
+    <operation name="findPagoPlazoEsquelasByDoc">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findPagoPlazoEsquelasByDocRequest" message="tns:findPagoPlazoEsquelasByDoc" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findPagoPlazoEsquelasByDocResponse" message="tns:findPagoPlazoEsquelasByDocResponse" />
+    </operation>
+    <operation name="findProByNroDocumento">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findProByNroDocumentoRequest" message="tns:findProByNroDocumento" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findProByNroDocumentoResponse" message="tns:findProByNroDocumentoResponse" />
+    </operation>
+    <operation name="findVehByVehNroDePlaca">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehByVehNroDePlacaRequest" message="tns:findVehByVehNroDePlaca" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehByVehNroDePlacaResponse" message="tns:findVehByVehNroDePlacaResponse" />
+    </operation>
+    <operation name="findVehiculoLineaByVehNroPlaca">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoLineaByVehNroPlacaRequest" message="tns:findVehiculoLineaByVehNroPlaca" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoLineaByVehNroPlacaResponse" message="tns:findVehiculoLineaByVehNroPlacaResponse" />
+    </operation>
+    <operation name="findVehiculoAsociadoLineaByVehNroPlaca">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoAsociadoLineaByVehNroPlacaRequest" message="tns:findVehiculoAsociadoLineaByVehNroPlaca" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoAsociadoLineaByVehNroPlacaResponse" message="tns:findVehiculoAsociadoLineaByVehNroPlacaResponse" />
+    </operation>
+    <operation name="findVehiculoLineaByCodigoVmt">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoLineaByCodigoVmtRequest" message="tns:findVehiculoLineaByCodigoVmt" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehiculoLineaByCodigoVmtResponse" message="tns:findVehiculoLineaByCodigoVmtResponse" />
+    </operation>
+    <operation name="findEsquelasByVehNroPlaca">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findEsquelasByVehNroPlacaRequest" message="tns:findEsquelasByVehNroPlaca" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findEsquelasByVehNroPlacaResponse" message="tns:findEsquelasByVehNroPlacaResponse" />
+    </operation>
+    <operation name="findControlCharlasByNroDocumento">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findControlCharlasByNroDocumentoRequest" message="tns:findControlCharlasByNroDocumento" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findControlCharlasByNroDocumentoResponse" message="tns:findControlCharlasByNroDocumentoResponse" />
+    </operation>
+    <operation name="findRutaByCodigoVmt">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRutaByCodigoVmtRequest" message="tns:findRutaByCodigoVmt" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRutaByCodigoVmtResponse" message="tns:findRutaByCodigoVmtResponse" />
+    </operation>
+    <operation name="findPrevencionesByIdVehiculo">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findPrevencionesByIdVehiculoRequest" message="tns:findPrevencionesByIdVehiculo" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findPrevencionesByIdVehiculoResponse" message="tns:findPrevencionesByIdVehiculoResponse" />
+    </operation>
+    <operation name="findRestriccionesByIdVehiculo">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRestriccionesByIdVehiculoRequest" message="tns:findRestriccionesByIdVehiculo" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRestriccionesByIdVehiculoResponse" message="tns:findRestriccionesByIdVehiculoResponse" />
+    </operation>
+    <operation name="findRestriccionesByNroDocumento">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRestriccionesByNroDocumentoRequest" message="tns:findRestriccionesByNroDocumento" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findRestriccionesByNroDocumentoResponse" message="tns:findRestriccionesByNroDocumentoResponse" />
+    </operation>
+    <operation name="findExperticiasByIdVehiculo">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findExperticiasByIdVehiculoRequest" message="tns:findExperticiasByIdVehiculo" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findExperticiasByIdVehiculoResponse" message="tns:findExperticiasByIdVehiculoResponse" />
+    </operation>
+    <operation name="findVehByDoc">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehByDocRequest" message="tns:findVehByDoc" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findVehByDocResponse" message="tns:findVehByDocResponse" />
+    </operation>
+    <operation name="findDuplicidadByCaracteristicas">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findDuplicidadByCaracteristicasRequest" message="tns:findDuplicidadByCaracteristicas" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findDuplicidadByCaracteristicasResponse" message="tns:findDuplicidadByCaracteristicasResponse" />
+    </operation>
+    <operation name="findConsultaByPoliza">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findConsultaByPolizaRequest" message="tns:findConsultaByPoliza" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findConsultaByPolizaResponse" message="tns:findConsultaByPolizaResponse" />
+    </operation>
+    <operation name="findValidaPMCaracteristicas">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findValidaPMCaracteristicasRequest" message="tns:findValidaPMCaracteristicas" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findValidaPMCaracteristicasResponse" message="tns:findValidaPMCaracteristicasResponse" />
+    </operation>
+    <operation name="findOficiosRemitidosVMT">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findOficiosRemitidosVMTRequest" message="tns:findOficiosRemitidosVMT" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findOficiosRemitidosVMTResponse" message="tns:findOficiosRemitidosVMTResponse" />
+    </operation>
+    <operation name="findOficiosEsquelaRemitidosVMT">
+      <input wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findOficiosEsquelaRemitidosVMTRequest" message="tns:findOficiosEsquelaRemitidosVMT" />
+      <output wsam:Action="http://ws.model.lic.sertracen.sv.com/LicRpvWS/findOficiosEsquelaRemitidosVMTResponse" message="tns:findOficiosEsquelaRemitidosVMTResponse" />
+    </operation>
+  </portType>
+  <binding name="LicRpvWSPortBinding" type="tns:LicRpvWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findByPersonaPK">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findHistorialEsquelaByDoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findPagoPlazoEsquelasByDoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findProByNroDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findVehByVehNroDePlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findVehiculoLineaByVehNroPlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findVehiculoAsociadoLineaByVehNroPlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findVehiculoLineaByCodigoVmt">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findEsquelasByVehNroPlaca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findControlCharlasByNroDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRutaByCodigoVmt">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findPrevencionesByIdVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRestriccionesByIdVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRestriccionesByNroDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findExperticiasByIdVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findVehByDoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findDuplicidadByCaracteristicas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findConsultaByPoliza">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findValidaPMCaracteristicas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findOficiosRemitidosVMT">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findOficiosEsquelaRemitidosVMT">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LicRpvWSService">
+    <port name="LicRpvWSPort" binding="tns:LicRpvWSPortBinding">
+      <soap:address location="http://vmt.sertracen.com.sv:8383/LicRpvWS/LicRpvWSService" />
+    </port>
+  </service>
+</definitions>

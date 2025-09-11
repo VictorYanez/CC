@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mop.Audit.ENT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mop.Audit.ENT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Sesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaHoraIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraSalida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hostname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSesion" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IdSesionIIS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpIngreso" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sesion" nillable="true" type="tns:Sesion" />
+  <xs:complexType name="Navegacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdNavegacion" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IdSesionIIS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sesion" nillable="true" type="tns:Sesion" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Navegacion" nillable="true" type="tns:Navegacion" />
+  <xs:complexType name="Movimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseDatos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClienteDB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consulta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Datos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdMovimiento" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IdRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Navegacion" nillable="true" type="tns:Navegacion" />
+      <xs:element minOccurs="0" name="Parametros" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Produccion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServidorDB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tabla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMovimiento" nillable="true" type="tns:TipoMovimiento" />
+      <xs:element minOccurs="0" name="UsuarioDB" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Movimiento" nillable="true" type="tns:Movimiento" />
+  <xs:complexType name="TipoMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdTipoMovimiento" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoMovimiento" nillable="true" type="tns:TipoMovimiento" />
+  <xs:complexType name="Actividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdActividad" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Navegacion" nillable="true" type="tns:Navegacion" />
+      <xs:element minOccurs="0" name="TipoActividad" nillable="true" type="tns:TipoActividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Actividad" nillable="true" type="tns:Actividad" />
+  <xs:complexType name="TipoActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdTipoActividad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoActividad" nillable="true" type="tns:TipoActividad" />
+  <xs:complexType name="Sistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sistema" nillable="true" type="tns:Sistema" />
+  <xs:complexType name="ParAuditar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desde" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hasta" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdNavegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSesion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_accion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParAuditar" nillable="true" type="tns:ParAuditar" />
+  <xs:complexType name="ArrayOfUsuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuarios" nillable="true" type="tns:Usuarios" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarios" nillable="true" type="tns:ArrayOfUsuarios" />
+  <xs:complexType name="Usuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ficha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuarios" nillable="true" type="tns:Usuarios" />
+  <xs:complexType name="ArrayOfSesionesUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SesionesUsuario" nillable="true" type="tns:SesionesUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSesionesUsuario" nillable="true" type="tns:ArrayOfSesionesUsuario" />
+  <xs:complexType name="SesionesUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FechaHoraIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraSalida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hostname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSesion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSesionIIS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpIngreso" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SesionesUsuario" nillable="true" type="tns:SesionesUsuario" />
+  <xs:complexType name="ArrayOfNavegacionSesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NavegacionSesion" nillable="true" type="tns:NavegacionSesion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNavegacionSesion" nillable="true" type="tns:ArrayOfNavegacionSesion" />
+  <xs:complexType name="NavegacionSesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraSalida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hostname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdNavegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSesion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSesionIIS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NavegacionSesion" nillable="true" type="tns:NavegacionSesion" />
+  <xs:complexType name="ArrayOfMovimientoNavegacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MovimientoNavegacion" nillable="true" type="tns:MovimientoNavegacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMovimientoNavegacion" nillable="true" type="tns:ArrayOfMovimientoNavegacion" />
+  <xs:complexType name="MovimientoNavegacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseDatos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClienteDB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consulta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Datos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaHoraIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraSalida" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaMovimiento" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaNavegacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hostname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdMovimiento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdNavegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdRegistro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSesion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSesionIIS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTipoMovimiento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parametros" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Produccion" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServidorDB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tabla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMovimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioDB" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MovimientoNavegacion" nillable="true" type="tns:MovimientoNavegacion" />
+</xs:schema>

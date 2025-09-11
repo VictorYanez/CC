@@ -1,0 +1,36 @@
+﻿body {
+    background-image:url('/assets/img/mopt/bg.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #313944 !important;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+}
+
+.login-container {
+    width: 420px;
+}
+
+.nombre-sistema h1 {
+    color:#d2d2d2
+}
+
+.login-box .toolbar {
+    background: #313945;
+    color:#d2d2d2;
+}
+
+.login-box .toolbar a {
+    color:#d2d2d2;
+}
+
+
+
+
+
+        

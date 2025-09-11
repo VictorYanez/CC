@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mop.Rh.ENT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UnidadEnlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnidadEnlace" nillable="true" type="tns:UnidadEnlace" />
+  <xs:complexType name="Sistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Aprobacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Produccion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Solicitud" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Objetivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sistema" nillable="true" type="tns:Sistema" />
+  <xs:complexType name="ArrayOfUnidadEnlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnidadEnlace" nillable="true" type="tns:UnidadEnlace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnidadEnlace" nillable="true" type="tns:ArrayOfUnidadEnlace" />
+  <xs:complexType name="Tipo_Enlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Registro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_Tipo_Enlace" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tipo_Enlace" nillable="true" type="tns:Tipo_Enlace" />
+  <xs:complexType name="ArrayOfTipo_Enlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tipo_Enlace" nillable="true" type="tns:Tipo_Enlace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipo_Enlace" nillable="true" type="tns:ArrayOfTipo_Enlace" />
+  <xs:complexType name="Enlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fecha_Registro" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Usuario_Registro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+      <xs:element minOccurs="0" name="Tipo_Enlace" nillable="true" type="tns:Tipo_Enlace" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Enlace" nillable="true" type="tns:Enlace" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clave_Anterior" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estatus" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha_Cambio_Contrasena" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Empleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Insticion_Representa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Usuario" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tipos_Servicios" nillable="true" type="tns:Tipos_Servicios" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="Tipos_Servicios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Tipo_Servicio" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tipos_Servicios" nillable="true" type="tns:Tipos_Servicios" />
+  <xs:complexType name="ArrayOfEnlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enlace" nillable="true" type="tns:Enlace" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnlace" nillable="true" type="tns:ArrayOfEnlace" />
+  <xs:complexType name="ParEnlaces">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_accion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParEnlaces" nillable="true" type="tns:ParEnlaces" />
+  <xs:complexType name="ArrayOfEnlacesActivos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EnlacesActivos" nillable="true" type="tns:EnlacesActivos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnlacesActivos" nillable="true" type="tns:ArrayOfEnlacesActivos" />
+  <xs:complexType name="EnlacesActivos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Estado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Tipo_Enlace" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Enlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnidadOrganizativa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EnlacesActivos" nillable="true" type="tns:EnlacesActivos" />
+</xs:schema>

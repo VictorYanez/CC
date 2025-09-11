@@ -1,0 +1,121 @@
+﻿.logo-general {
+  max-width: 55px;
+  height: auto;
+}
+
+.navbar {
+background-color:#394048
+}
+
+
+.user-info {
+max-width: 150px;
+}
+
+.goes-text { 
+    color: #d2d2d2
+}
+
+.goes-bg {
+background-color:#313945
+}
+
+.ace-nav > li > a {
+background-color:#313945
+}
+
+.ace-nav>li.open>a, .ace-nav>li>a:focus, .ace-nav>li>a:hover {
+ background-color: #111C4E;  
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+ background-color: #111C4E; 
+}
+
+.goes-icon-dark-blue {
+    color:#313945
+}
+
+.modal-backdrop
+{
+    opacity:0.8 !important;
+}
+
+ .may {
+    text-transform:uppercase;
+ }
+
+.profile-user-info-striped {
+border: 1px solid #DCEBF7;
+}
+.profile-user-info {
+display: table;
+width: 98%;
+width: calc(100% - 24px);
+margin: 0 auto;
+}
+.profile-info-name {
+text-align: right;
+padding: 6px 10px 6px 4px;
+font-weight: 400;
+color: #667E99;
+background-color: transparent;
+width: 130px;
+vertical-align: middle;
+}
+.profile-info-row:first-child .profile-info-name, .profile-info-row:first-child .profile-info-value {  
+    border-top: none;
+}
+.profile-user-info-striped .profile-info-name {
+    color: #336199;
+    background-color: #EDF3F4;
+    border-top: 1px solid #F7FBFF;
+}
+
+
+
+/* FORMULARIOS ESPECIFICOS*/
+
+ .modalContacto {
+            background-color: white !important;
+            width: 50% !important;
+            height: 355px !important;
+            top: -10px !important;
+ }
+
+  .modalGarantia {
+            background-color: white !important;
+            width: 50% !important;
+            height: 370px !important;
+            top: -10px !important;
+ }
+
+  .modalCambiarEstado {
+            background-color: white !important;
+            width: 40% !important;
+            height: 200px !important;
+            top: -10px !important;
+ }
+
+ .modalAsignarLinea {
+            background-color: white !important;
+            width: 40% !important;
+            height: 450px !important;
+            top: -10px !important;
+ }
+
+ .modalBusqueda {
+            background-color: white !important;
+            width: 40% !important;
+            height: 230px !important;
+            top: -10px !important;
+ }
+
+
+  
+
+.badge-parent>span{
+  font-size:3rem;
+}
+
+       

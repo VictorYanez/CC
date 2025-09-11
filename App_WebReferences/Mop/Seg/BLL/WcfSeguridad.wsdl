@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfSeguridad" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Seguridad.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Seguridad.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://soa.mop.gob.sv/mop/seg/Seguridad.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mop.Seg.ENT" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfSeguridad_NombreDelSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:NombreDelSistema" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_NombreDelSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NombreDelSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_VerificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_VerificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_VerificarUsuarioContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_VerificarUsuarioContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarUsuarioContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_UsuarioPerfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioPerfiles" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_UsuarioPerfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioPerfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_MenuPrincipal_InputMessage">
+    <wsdl:part name="parameters" element="tns:MenuPrincipal" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_MenuPrincipal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenuPrincipalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_MenuModulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:MenuModulo" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_MenuModulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenuModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_UsuarioNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioNR" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_UsuarioNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsuarioNRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_NombreFormulario_InputMessage">
+    <wsdl:part name="parameters" element="tns:NombreFormulario" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_NombreFormulario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NombreFormularioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CargarPersonaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPersonaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CargarPersonaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPersonaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_BuscarMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarMenu" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_BuscarMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_EnviarCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_EnviarCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_SolicitarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_SolicitarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_ValidarCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_ValidarCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CargarClaveCambioContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarClaveCambioContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CargarClaveCambioContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarClaveCambioContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CambiarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_CambiarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_Uno_InputMessage">
+    <wsdl:part name="parameters" element="tns:Uno" />
+  </wsdl:message>
+  <wsdl:message name="IWcfSeguridad_Uno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfSeguridad">
+    <wsdl:operation name="NombreDelSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/NombreDelSistema" message="tns:IWcfSeguridad_NombreDelSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/NombreDelSistemaResponse" message="tns:IWcfSeguridad_NombreDelSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/VerificarUsuario" message="tns:IWcfSeguridad_VerificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/VerificarUsuarioResponse" message="tns:IWcfSeguridad_VerificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuarioContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/VerificarUsuarioContrasena" message="tns:IWcfSeguridad_VerificarUsuarioContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/VerificarUsuarioContrasenaResponse" message="tns:IWcfSeguridad_VerificarUsuarioContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioPerfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/UsuarioPerfiles" message="tns:IWcfSeguridad_UsuarioPerfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/UsuarioPerfilesResponse" message="tns:IWcfSeguridad_UsuarioPerfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MenuPrincipal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/MenuPrincipal" message="tns:IWcfSeguridad_MenuPrincipal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/MenuPrincipalResponse" message="tns:IWcfSeguridad_MenuPrincipal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MenuModulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/MenuModulo" message="tns:IWcfSeguridad_MenuModulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/MenuModuloResponse" message="tns:IWcfSeguridad_MenuModulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/UsuarioNR" message="tns:IWcfSeguridad_UsuarioNR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/UsuarioNRResponse" message="tns:IWcfSeguridad_UsuarioNR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NombreFormulario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/NombreFormulario" message="tns:IWcfSeguridad_NombreFormulario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/NombreFormularioResponse" message="tns:IWcfSeguridad_NombreFormulario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarPersonaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/CargarPersonaUsuario" message="tns:IWcfSeguridad_CargarPersonaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/CargarPersonaUsuarioResponse" message="tns:IWcfSeguridad_CargarPersonaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/BuscarMenu" message="tns:IWcfSeguridad_BuscarMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/BuscarMenuResponse" message="tns:IWcfSeguridad_BuscarMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/EnviarCorreo" message="tns:IWcfSeguridad_EnviarCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/EnviarCorreoResponse" message="tns:IWcfSeguridad_EnviarCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/SolicitarContrasena" message="tns:IWcfSeguridad_SolicitarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/SolicitarContrasenaResponse" message="tns:IWcfSeguridad_SolicitarContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/ValidarCorreo" message="tns:IWcfSeguridad_ValidarCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/ValidarCorreoResponse" message="tns:IWcfSeguridad_ValidarCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarClaveCambioContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/CargarClaveCambioContrasena" message="tns:IWcfSeguridad_CargarClaveCambioContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/CargarClaveCambioContrasenaResponse" message="tns:IWcfSeguridad_CargarClaveCambioContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/CambiarContrasena" message="tns:IWcfSeguridad_CambiarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/CambiarContrasenaResponse" message="tns:IWcfSeguridad_CambiarContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Uno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfSeguridad/Uno" message="tns:IWcfSeguridad_Uno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfSeguridad/UnoResponse" message="tns:IWcfSeguridad_Uno_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfSeguridad" type="tns:IWcfSeguridad">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NombreDelSistema">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/NombreDelSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/VerificarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarUsuarioContrasena">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/VerificarUsuarioContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioPerfiles">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/UsuarioPerfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MenuPrincipal">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/MenuPrincipal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MenuModulo">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/MenuModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsuarioNR">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/UsuarioNR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NombreFormulario">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/NombreFormulario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPersonaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/CargarPersonaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarMenu">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/BuscarMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreo">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/EnviarCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarContrasena">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/SolicitarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCorreo">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/ValidarCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarClaveCambioContrasena">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/CargarClaveCambioContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/CambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Uno">
+      <soap:operation soapAction="http://tempuri.org/IWcfSeguridad/Uno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfSeguridad">
+    <wsdl:port name="BasicHttpBinding_IWcfSeguridad" binding="tns:BasicHttpBinding_IWcfSeguridad">
+      <soap:address location="http://soa.mop.gob.sv/mop/seg/Seguridad.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

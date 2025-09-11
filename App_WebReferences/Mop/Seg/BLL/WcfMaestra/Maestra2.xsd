@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mop.Seg.ENT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mop.Seg.ENT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Sistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Aprobacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Produccion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Solicitud" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Unidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Objetivo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sistema" nillable="true" type="tns:Sistema" />
+  <xs:complexType name="ArrayOfSistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSistema" nillable="true" type="tns:ArrayOfSistema" />
+  <xs:complexType name="Menu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Icono" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdPadre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Menu" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jerarquia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nivel" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Nombre_Forma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+      <xs:element minOccurs="0" name="Texto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url_Ayuda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url_Ayuda_Video" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu" nillable="true" type="tns:Menu" />
+  <xs:complexType name="ArrayOfMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menu" nillable="true" type="tns:Menu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenu" nillable="true" type="tns:ArrayOfMenu" />
+  <xs:complexType name="Perfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Creacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Modificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Perfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Tipo_Permiso" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Nivel_Perfil" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Perfil" nillable="true" type="tns:Perfil" />
+  <xs:complexType name="ArrayOfPerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Perfil" nillable="true" type="tns:Perfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfil" nillable="true" type="tns:ArrayOfPerfil" />
+  <xs:complexType name="Detalle_Perfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Actualizar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Control_Total" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Eliminar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Escritura" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Impresion" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Imprimir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Insertar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Lectura" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Menu" nillable="true" type="tns:Menu" />
+      <xs:element minOccurs="0" name="Perfil" nillable="true" type="tns:Perfil" />
+      <xs:element minOccurs="0" name="Seleccionar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Detalle_Perfil" nillable="true" type="tns:Detalle_Perfil" />
+  <xs:complexType name="ArrayOfDetalle_Perfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Detalle_Perfil" nillable="true" type="tns:Detalle_Perfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalle_Perfil" nillable="true" type="tns:ArrayOfDetalle_Perfil" />
+  <xs:complexType name="ParSeguridad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Formulario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Menu" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Modulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Parametro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Perfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParSeguridad" nillable="true" type="tns:ParSeguridad" />
+  <xs:complexType name="ArrayOfDetallePerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetallePerfil" nillable="true" type="tns:DetallePerfil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetallePerfil" nillable="true" type="tns:ArrayOfDetallePerfil" />
+  <xs:complexType name="DetallePerfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Actualizar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Eliminar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdPadre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Menu" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Imprimir" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Insertar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sangria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seleccionar" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetallePerfil" nillable="true" type="tns:DetallePerfil" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clave_Anterior" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estatus" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha_Cambio_Contrasena" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_Creacion_Usuario" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id_Empleado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Insticion_Representa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo_Usuario" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tipos_Servicios" nillable="true" type="tns:Tipos_Servicios" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="Tipos_Servicios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Tipo_Servicio" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tipos_Servicios" nillable="true" type="tns:Tipos_Servicios" />
+  <xs:complexType name="ArrayOfUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuario" nillable="true" type="tns:ArrayOfUsuario" />
+  <xs:complexType name="Perfil_Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Nivel_Usuario" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="Perfil" nillable="true" type="tns:Perfil" />
+      <xs:element minOccurs="0" name="Sistema" nillable="true" type="tns:Sistema" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Perfil_Usuario" nillable="true" type="tns:Perfil_Usuario" />
+  <xs:complexType name="ArrayOfPerfil_Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Perfil_Usuario" nillable="true" type="tns:Perfil_Usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfil_Usuario" nillable="true" type="tns:ArrayOfPerfil_Usuario" />
+  <xs:complexType name="ArrayOfPerfilesDeUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerfilesDeUsuario" nillable="true" type="tns:PerfilesDeUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfilesDeUsuario" nillable="true" type="tns:ArrayOfPerfilesDeUsuario" />
+  <xs:complexType name="PerfilesDeUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdPerfil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfilesDeUsuario" nillable="true" type="tns:PerfilesDeUsuario" />
+  <xs:complexType name="Parametros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Parametro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Sistema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ip_Server" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parametros" nillable="true" type="tns:Parametros" />
+  <xs:complexType name="ArrayOfParametros">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parametros" nillable="true" type="tns:Parametros" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParametros" nillable="true" type="tns:ArrayOfParametros" />
+</xs:schema>
